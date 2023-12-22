@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap;');
+
+@font-face {
+    font-family: 'Silvana';
+    /* Име на шрифта, което ще използвате */
+    src: url('./font/Sevillana-Regular.ttf') format('truetype'),
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#a2000a, #cf0000);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: url(./images/tree.png);
+    z-index: 1;
+}
+
+.container .music {
+    margin-top: 20px;
+    margin-left: 1600px
+    
+}
+
+.container .circle {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 350px;
+    height: 350px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.container .circle::before {
+    content: '';
+    position: absolute;
+    
+    inset: -300px -400px;
+    top: 200px;
+    background: url(./images/santa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 800px;
+    animation: animate 5s ease-in-out infinite;
+    
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        transform: translateY(-25px);
+    }
+
+    50% {
+        transform: translateY(25px);
+    }
+}
+
+.container .circle::after {
+    content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        background: url('./christmas-image/mc.png') center center no-repeat;
+        background-size: cover;
+        opacity: 1;
+        z-index: -1;
+        /* За да поставите фоновата снимка под текста */
+    /* content: 'Merry Christmas';
+    position: absolute;
+    inset: -125px 200px;
+    font-family: 'Silvana', sans-serif;
+    font-size: 4em;
+    display: flex;
+     justify-content: center;
+    align-items: flex-end;
+    color: #fff;
+    text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000; */
+} 
+
+.container .snow {
+    position: relative;
+    display: flex;
+}
+
+.container .snow span {
+    position: relative;
+    min-width: 5px;
+    height: 5px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 1vw;
+    box-shadow: -100px 20px 5px #fff, 100px 20px 10px #fff;
+    animation: animateSnow 15s linear infinite;
+    animation-duration: calc(75s / var(--i));
+}
+
+.container .snow span:nth-child(even) {
+    min-width: 10px;
+    height: 10px;
+}
+
+@keyframes animateSnow {
+    0% {
+        transform: translateY(-10vh);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+}
