@@ -40,7 +40,8 @@ body {
 }
 
 .container .music {
-    margin-top: 20px;
+    display: inline-flex;
+    margin-top: 600px;
     margin-left: auto;
     
 }
@@ -50,8 +51,8 @@ body {
     top: 5%;
     left: 50%;
     transform: translate(-50%);
-    width: 350px;
-    height: 350px;
+    width: 30%;
+    height: 40vh;
     background: #fff;
     border-radius: 50%;
 }
@@ -65,7 +66,7 @@ body {
     background: url(./images/santa.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 800px;
+    background-size: 50vw;
     animation: animate 5s ease-in-out infinite;
     
 }
@@ -90,9 +91,10 @@ body {
         right: -10px;
         bottom: -10px;
         background: url('./christmas-image/mc.png') center center no-repeat;
-        background-size: cover;
+        background-size: 20vw;
         opacity: 1;
         z-index: -1;
+       
         /* За да поставите фоновата снимка под текста */
     /* content: 'Merry Christmas';
     position: absolute;
